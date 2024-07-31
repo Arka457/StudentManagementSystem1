@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2d3748;
+            color: #fff;
+        }
+        .sidebar a {
+            color: #cbd5e0;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #4a5568;
+            color: #fff;
+        }
+        .active {
+            background-color: #4a5568;
+        }
+        .stats-card, .content-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="flex">
+
+    <aside class="sidebar h-screen p-5">
+        <div class="mb-6">
+            <h1 class="text-2xl font-bold">SCHOOL</h1>
+        </div>
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="https://www.youtube.com/?reload=9">Students</a>
+            <a href="#">Teachers</a>
+            <a href="#">Attendance</a>
+            <a href="#">Courses</a>
+            <a href="#">Exam</a>
+            <a href="#">Payment</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </nav>
+    </aside>
+
+    <div class="flex-1 p-6 space-y-6">
+
+        <!-- Top Bar -->
+        <div class="flex justify-between items-center">
+            <h2 class="text-3xl font-semibold">Dashboard</h2>
+            <div class="flex items-center space-x-4">
+                <input type="text" placeholder="Search for students/teachers/documents..." class="py-2 px-4 border rounded-md">
+                <div class="bg-gray-300 h-10 w-10 rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="grid grid-cols-4 gap-6">
+            <div class="stats-card text-center">
+                <h3 class="text-lg font-medium">Students</h3>
+                <p class="text-3xl font-semibold">12478</p>
+            </div>
+            <div class="stats-card text-center">
+                <h3 class="text-lg font-medium">Teachers</h3>
+                <p class="text-3xl font-semibold">478</p>
+            </div>
+            <div class="stats-card text-center">
+                <h3 class="text-lg font-medium">Parents</h3>
+                <p class="text-3xl font-semibold">8908</p>
+            </div>
+            <div class="stats-card text-center">
+                <h3 class="text-lg font-medium">Earnings</h3>
+                <p class="text-3xl font-semibold">$42.8k</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <!-- Total Earnings -->
+            <div class="content-card col-span-2">
+                <h3 class="text-xl font-semibold mb-4">Total Earnings</h3>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <span class="font-semibold">2022</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-600">Earnings</span>
+                        <div class="w-4 h-4 bg-yellow-400"></div>
+                        <span class="text-gray-600">Expense</span>
+                        <div class="w-4 h-4 bg-gray-400"></div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <img src="https://via.placeholder.com/600x300" alt="Earnings chart" class="w-full">
+                </div>
+            </div>
+
+            <!-- Events Calendar -->
+            <div class="content-card">
+                <h3 class="text-xl font-semibold mb-4">Events Calendar</h3>
+                <div>
+                    <div class="flex justify-between">
+                        <span>08 Jan, 2023</span>
+                        <span>School Annual Function</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>27 Jan, 2023</span>
+                        <span>Sport Competition</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <img src="https://images-cdn.ubuy.co.in/65fdd20eba9ddf01a607798d-2024-2025-calendar-12-monthly-wall.jpg" alt="Calendar" class="w-full">
+                </div>
+            </div>
+
+            <!-- Top Performer -->
+            <div class="content-card col-span-2">
+                <h3 class="text-xl font-semibold mb-4">Top Performer</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 border-b">Photo</th>
+                                <th class="py-2 px-4 border-b">Name</th>
+                                <th class="py-2 px-4 border-b">ID Number</th>
+                                <th class="py-2 px-4 border-b">Standard</th>
+                                <th class="py-2 px-4 border-b">Rank</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b"><div class="w-8 h-8 bg-gray-300 rounded-full"></div></td>
+                                <td class="py-2 px-4 border-b">Enos Schimel</td>
+                                <td class="py-2 px-4 border-b">ID: 4276</td>
+                                <td class="py-2 px-4 border-b">6th Class</td>
+                                <td class="py-2 px-4 border-b">98.68%</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b"><div class="w-8 h-8 bg-gray-300 rounded-full"></div></td>
+                                <td class="py-2 px-4 border-b">Cayla Bergnaum</td>
+                                <td class="py-2 px-4 border-b">ID: 2347</td>
+                                <td class="py-2 px-4 border-b">6th Class</td>
+                                <td class="py-2 px-4 border-b">98.22%</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b"><div class="w-8 h-8 bg-gray-300 rounded-full"></div></td>
+                                <td class="py-2 px-4 border-b">Kathryn Hahn</td>
+                                <td class="py-2 px-4 border-b">ID: 5940</td>
+                                <td class="py-2 px-4 border-b">5th Class</td>
+                                <td class="py-2 px-4 border-b">97.90%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Attendance -->
+            <div class="content-card">
+                <h3 class="text-xl font-semibold mb-4">Attendance</h3>
+                <div>
+                    <div class="flex justify-between">
+                        <span>Students</span>
+                        <span>84%</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Teachers</span>
+                        <span>91%</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <img src="https://via.placeholder.com/200x200" alt="Attendance chart" class="w-full">
+                </div>
+            </div>
+
+            <!-- Community Card -->
+            <div class="content-card">
+                <h3 class="text-xl font-semibold mb-4">Join the community and find out more...</h3>
+                <div class="flex justify-between items-center">
+                    <span>Explore now</span>
+                    <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
