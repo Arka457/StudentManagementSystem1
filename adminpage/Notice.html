@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        .upload-form {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload a File</h1>
+    <form class="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Choose file to upload:</label><br>
+        <input type="file" id="file" name="file" required><br>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
